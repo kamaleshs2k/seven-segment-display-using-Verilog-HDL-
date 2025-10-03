@@ -41,25 +41,6 @@ To design and simulate a seven-segment display driver using Verilog HDL, and ver
 ## Verilog Code for Seven-Segment Display  
 
 ```verilog
-// seven_segment_display.v
-module seven_segment_display (
-    input wire [3:0] binary_input,
-    output reg [6:0] seg_output
-);
-
-always @(*) begin
-    case (binary_input)
-        
-        
-        default: seg_output = 7'b0000000; // blank or error
-    endcase
-end
-
-endmodule
-```
-## Testbench for Seven-Segment Display
-```verilog
-
 module BCD_to_7seg (bcd,seg);
 input  [3:0] bcd;   
 output reg [6:0] seg;
@@ -80,6 +61,9 @@ default: seg = 7'b1111111;
 endcase
 end
 endmodule
+```
+## Testbench for Seven-Segment Display
+```verilog
 
 module tb_BCD_to_7seg;
 
